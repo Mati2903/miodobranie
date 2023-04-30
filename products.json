@@ -1,0 +1,165 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"attributes": {
+				"name": "Miód Wielokwiatowy",
+				"content": "Miody wielokwiatowe to duża grupa miodów, która jest jednym z popularniejszych i powszechnie stosowanych produktów pszczelich. Różnią się smakiem, barwą i walorami zdrowotnymi. Właściwości te są uzależnione od gatunków kwiatów, krzewów i drzew wybieranych przez pszczoły, miejsc występowania pasiek oraz terminów zbioru.",
+				"meta_description": "Miód wielokwiatowy od firmy Miodobranie",
+				"meta_title": "Miód wielokwiatowy - MIODOBRANIE",
+				"price": 40,
+				"slug": "miod-wielokwiatowy",
+				"createdAt": "2023-04-10T19:11:37.914Z",
+				"updatedAt": "2023-04-10T19:16:24.187Z",
+				"publishedAt": "2023-04-10T19:16:24.179Z",
+				"image": {
+					"data": {
+						"id": 1,
+						"attributes": {
+							"name": "pngwing(10).png",
+							"alternativeText": null,
+							"caption": null,
+							"width": 2362,
+							"height": 2362,
+							"formats": {
+								"thumbnail": {
+									"name": "thumbnail_pngwing(10).png",
+									"hash": "thumbnail_pngwing_10_eb7f6a5181",
+									"ext": ".png",
+									"mime": "image/png",
+									"path": null,
+									"width": 156,
+									"height": 156,
+									"size": 37.19,
+									"url": "/uploads/thumbnail_pngwing_10_eb7f6a5181.png"
+								},
+								"small": {
+									"name": "small_pngwing(10).png",
+									"hash": "small_pngwing_10_eb7f6a5181",
+									"ext": ".png",
+									"mime": "image/png",
+									"path": null,
+									"width": 500,
+									"height": 500,
+									"size": 289.13,
+									"url": "/uploads/small_pngwing_10_eb7f6a5181.png"
+								},
+								"medium": {
+									"name": "medium_pngwing(10).png",
+									"hash": "medium_pngwing_10_eb7f6a5181",
+									"ext": ".png",
+									"mime": "image/png",
+									"path": null,
+									"width": 750,
+									"height": 750,
+									"size": 611.17,
+									"url": "/uploads/medium_pngwing_10_eb7f6a5181.png"
+								},
+								"large": {
+									"name": "large_pngwing(10).png",
+									"hash": "large_pngwing_10_eb7f6a5181",
+									"ext": ".png",
+									"mime": "image/png",
+									"path": null,
+									"width": 1000,
+									"height": 1000,
+									"size": 1048.6,
+									"url": "/uploads/large_pngwing_10_eb7f6a5181.png"
+								}
+							},
+							"hash": "pngwing_10_eb7f6a5181",
+							"ext": ".png",
+							"mime": "image/png",
+							"size": 1151.58,
+							"url": "/uploads/pngwing_10_eb7f6a5181.png",
+							"previewUrl": null,
+							"provider": "local",
+							"provider_metadata": null,
+							"createdAt": "2023-04-10T19:05:54.638Z",
+							"updatedAt": "2023-04-10T19:05:54.638Z"
+						}
+					}
+				}
+			}
+		},
+		{
+			"id": 2,
+			"attributes": {
+				"name": "Miód Gryczany",
+				"content": "Miód gryczany pozyskiwany jest przez pszczoły z kwiatów gryki. Jest to ziarnisty miód o brązowej barwie*, piekącym, słodkim smaku oraz silnym ziołowym aromacie. Jest to jeden z najzdrowszych miodów wykazujący dużą antybiotyczność. Miód gryczany charakteryzuje się intensywnym smakiem i zapachem gryki, przez co ma swoich zagorzałych zwolenników, ale też i przeciwników.",
+				"meta_description": "Miód gryczany od firmy Miodobranie",
+				"meta_title": "Miód Gryczany - MIODOBRANIE",
+				"price": 50,
+				"slug": "miod-gryczany",
+				"createdAt": "2023-04-10T19:16:09.072Z",
+				"updatedAt": "2023-04-10T19:16:18.458Z",
+				"publishedAt": "2023-04-10T19:16:18.449Z",
+				"image": {
+					"data": {
+						"id": 2,
+						"attributes": {
+							"name": "pngwing(11).png",
+							"alternativeText": null,
+							"caption": null,
+							"width": 800,
+							"height": 771,
+							"formats": {
+								"thumbnail": {
+									"name": "thumbnail_pngwing(11).png",
+									"hash": "thumbnail_pngwing_11_23fe4c507c",
+									"ext": ".png",
+									"mime": "image/png",
+									"path": null,
+									"width": 162,
+									"height": 156,
+									"size": 47.41,
+									"url": "/uploads/thumbnail_pngwing_11_23fe4c507c.png"
+								},
+								"small": {
+									"name": "small_pngwing(11).png",
+									"hash": "small_pngwing_11_23fe4c507c",
+									"ext": ".png",
+									"mime": "image/png",
+									"path": null,
+									"width": 500,
+									"height": 482,
+									"size": 363.32,
+									"url": "/uploads/small_pngwing_11_23fe4c507c.png"
+								},
+								"medium": {
+									"name": "medium_pngwing(11).png",
+									"hash": "medium_pngwing_11_23fe4c507c",
+									"ext": ".png",
+									"mime": "image/png",
+									"path": null,
+									"width": 750,
+									"height": 723,
+									"size": 753.88,
+									"url": "/uploads/medium_pngwing_11_23fe4c507c.png"
+								}
+							},
+							"hash": "pngwing_11_23fe4c507c",
+							"ext": ".png",
+							"mime": "image/png",
+							"size": 170.07,
+							"url": "/uploads/pngwing_11_23fe4c507c.png",
+							"previewUrl": null,
+							"provider": "local",
+							"provider_metadata": null,
+							"createdAt": "2023-04-10T19:14:55.780Z",
+							"updatedAt": "2023-04-10T19:14:55.780Z"
+						}
+					}
+				}
+			}
+		}
+	],
+	"meta": {
+		"pagination": {
+			"page": 1,
+			"pageSize": 25,
+			"pageCount": 1,
+			"total": 2
+		}
+	}
+}
