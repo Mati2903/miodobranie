@@ -13,13 +13,4 @@ function App({ Component, pageProps }) {
 	);
 }
 
-// App.getInitialProps = async ({ Component, ctx }) => {
-// 	const { token } = cookies.get(ctx);
-// 	const pageProps = Component.getInitialProps
-// 		? await Component.getInitialProps(ctx)
-// 		: {};
-
-// 	return { pageProps, token };
-// };
-
 export default App;

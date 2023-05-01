@@ -38,6 +38,7 @@ const cartSlice = createSlice({
 	},
 });
 
+//reducer for visibility state of cart panel
 const visibilitySlice = createSlice({
 	name: "visibility",
 	initialState: {

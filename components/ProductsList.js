@@ -8,14 +8,15 @@ import { closeCart } from "../redux/cartSlice";
 const ProductsList = ({ products }) => {
 	const dispatch = useDispatch();
 	return (
-		<div>
+		<div className={styles.container}>
 			{products &&
 				products.data.map((product) => {
 					return (
-						<div key={product.id}>
+						<div key={product.id} className={styles.productContainer}>
 							<Link
 								href={`/shop/${product.attributes.slug}`}
 								onClick={() => dispatch(closeCart())}
+								className={styles.productLink}
 							>
 								{product.attributes.name}
 								<img

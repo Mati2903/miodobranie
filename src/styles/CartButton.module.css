@@ -1,12 +1,27 @@
 .cartBtn {
 	position: absolute;
 	top: 1rem;
-	right: 1rem;
+	right: 3rem;
 	border: 2px solid #333;
 	width: 50px;
 	height: 50px;
 	font-size: 1.25rem;
 	background: none;
+}
+
+.cartQuantity {
+	position: absolute;
+	right: -0.75rem;
+	top: -0.75rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(238, 148, 0);
+	border-radius: 50%;
+	font-size: 0.8rem;
+	font-weight: bold;
 }
 
 .cartBtn svg {

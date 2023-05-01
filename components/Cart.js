@@ -35,6 +35,7 @@ const Cart = () => {
 			<button className={styles.cart__closeBtn} onClick={handleClose}>
 				<AiOutlineClose />
 			</button>
+			{/* if no products in cart, display text */}
 			{cart.length === 0 && <p>Brak produktów w koszyku</p>}
 			{cart.map((item) => (
 				<div className={styles.cart__product} key={item.id}>
