@@ -1,11 +1,12 @@
-import styles from "../../styles/Product.module.css";
+import { useSelector } from "react-redux";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+
+import styles from "../../styles/ProductSlug.module.css";
 import { API_URL } from "../../../utils/urls";
 import BackBtn from "../../../components/BackBtn";
 import AddToCartBtn from "../../../components/AddToCartBtn";
 import Cart from "../../../components/Cart";
-import { useSelector } from "react-redux";
 
 //props from SSR and StaticPaths next functions below
 const Product = ({ id, product }) => {

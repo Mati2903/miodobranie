@@ -1,28 +1,37 @@
-.image {
-	width: 150px;
-}
-
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 4rem;
 	margin-top: 5rem;
 }
 
 .productContainer {
 	border: 2px solid green;
-	width: 100%;
-	min-height: 15rem;
+	border-radius: 1rem;
+	width: 270px; /* minimum width for mobile */
+	height: calc(270px * 1.618); /* golden ratio */
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	padding: 0 2rem;
+	justify-content: center;
+	gap: 3rem;
+	padding: 1rem;
 }
 
 .productLink {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
-	gap: 3rem;
+	justify-content: center;
+	gap: 1.5rem;
+}
+.image {
+	width: auto;
+	max-width: 200px;
+	height: 150px;
+}
+.price {
+	font-size: 1.25rem;
 }

@@ -18,7 +18,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgb(238, 148, 0);
+	background-color: var(--honey-color);
 	border-radius: 50%;
 	font-size: 0.8rem;
 	font-weight: bold;

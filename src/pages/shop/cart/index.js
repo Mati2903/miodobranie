@@ -1,7 +1,7 @@
 import Cart from "../../../../components/Cart";
 
 const CartPage = () => {
-	return <Cart />;
+	return <Cart fullscreen={false} />;
 };
 
 export default CartPage;

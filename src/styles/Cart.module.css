@@ -1,16 +1,20 @@
 .cart {
-	position: fixed;
+	position: absolute;
 	right: 0;
-	top: 0;
+	top: 5rem;
+	border-radius: 5px;
 	overflow-y: scroll;
 	padding: 2rem;
-	background-color: #bbb;
-	width: 20rem;
-	height: 100dvh;
+	background-color: #e1e1e1;
+	width: 40rem;
+	min-height: 10rem;
 	display: flex;
 	flex-direction: column;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+.cart.fullscreen {
+	width: 100%;
 }
 .cart::-webkit-scrollbar {
 	display: none; /*Chrome */
@@ -20,27 +24,69 @@
 	margin-bottom: 2rem;
 }
 
-.cart__buttonsGroup {
+.cart__tableHeaders {
 	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 0.5rem;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 1rem;
 }
 
-.cart__buttonsGroup p {
-	width: 10%;
+.cart__tableHeaders p {
+	width: 33%;
+}
+
+.cart__tableHeaders p:nth-child(2) {
 	text-align: center;
 }
+.cart__tableHeaders p:nth-child(3) {
+	text-align: end;
+}
+
+.cart__quantityButtons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 33%;
+	padding-left: 3rem;
+}
+
+.cart__quantityButtons button {
+	padding: 0.5rem;
+	border: none;
+	background-color: var(--honey-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	transition: all 0.15s linear;
+}
+
+.cart__quantityButtons button:hover {
+	filter: brightness(125%);
+}
+
+.cart__quantityButtons button:active {
+	filter: brightness(80%);
+}
+
+.cart__deleteBtn {
+	background-color: rgb(255, 255, 255) !important;
+}
+
+.cart__deleteBtn:hover {
+	background-color: rgb(170, 20, 20) !important;
+}
+
+.cart__quantityButtons p {
+	width: 1rem;
+	text-align: center;
+}
+
 .cart__closeBtn {
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
-}
-
-.cart__plusBtn,
-.cart__minusBtn,
-.cart__deleteBtn,
-.cart__closeBtn {
 	padding: 0.5rem;
 	display: flex;
 	align-items: center;
@@ -50,22 +96,29 @@
 
 .cart__product {
 	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
+	align-items: center;
 	margin-bottom: 2rem;
+}
+
+.cart__productHeading {
+	font-size: 1rem;
+	width: 33%;
+}
+
+.cart__productPriceSum {
+	width: 33%;
+	text-align: end;
 }
 
 .cart__productDivider {
 	height: 1.5px;
 	width: 100%;
+	margin-bottom: 2rem;
 	background-color: aliceblue;
 }
 
 .cart__sum {
-	/* position: absolute; */
-	/* bottom: 2rem; */
-	/* left: 0; */
 	width: 100%;
-	justify-self: flex-end;
 	font-weight: bold;
+	text-align: end;
 }

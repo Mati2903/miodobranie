@@ -1,14 +1,15 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { cartReducer, visibilityReducer } from "./cartSlice";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
+
+import { cartReducer, visibilityReducer } from "./cartSlice";
 
 const persistConfig = {
 	key: "root",
 	storage, //store data in localStorage
 };
-//root reducer with two reducers combied together
+//root reducer with two reducers combined together
 const rootReducer = combineReducers({
 	cart: cartReducer,
 	visibility: visibilityReducer,

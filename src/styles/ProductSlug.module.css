@@ -1,5 +1,6 @@
 .product__img {
 	width: 200px;
+	height: auto;
 }
 .product__heading {
 	font-size: 3rem;

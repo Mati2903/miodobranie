@@ -18,12 +18,14 @@ const ProductsList = ({ products }) => {
 								onClick={() => dispatch(closeCart())}
 								className={styles.productLink}
 							>
-								{product.attributes.name}
+								<h3>{product.attributes.name}</h3>
 								<img
 									src={fromImgToUrl(product.attributes.image.data.attributes)}
 									className={styles.image}
 								/>
-								<p>Cena: {product.attributes.price.toFixed(2)} zł</p>
+								<p className={styles.price}>
+									Cena: {product.attributes.price.toFixed(2)} zł
+								</p>
 							</Link>
 							<AddToCartBtn product={product} />
 						</div>

@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addToCart, openCart } from "../redux/cartSlice";
+import styles from "../src/styles/AddToCartBtn.module.css";
 
 const AddToCartBtn = ({ product }) => {
 	const dispatch = useDispatch();
@@ -7,12 +8,15 @@ const AddToCartBtn = ({ product }) => {
 	const handleAddToCart = (e, product) => {
 		e.preventDefault();
 		dispatch(addToCart(product));
-		dispatch(openCart());
+		// dispatch(openCart());
 	};
 
 	return (
 		<div>
-			<button onClick={(e) => handleAddToCart(e, product)}>
+			<button
+				className={styles.addToCartBtn}
+				onClick={(e) => handleAddToCart(e, product)}
+			>
 				Dodaj do koszyka
 			</button>
 		</div>

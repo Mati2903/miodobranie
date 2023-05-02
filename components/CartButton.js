@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
-import { openCart, closeCart } from "../redux/cartSlice";
 import { BsFillBasket3Fill } from "react-icons/bs";
+
+import { openCart, closeCart } from "../redux/cartSlice";
 import styles from "../src/styles/CartButton.module.css";
 
 const CartButton = () => {
@@ -12,20 +13,32 @@ const CartButton = () => {
 		isOpen ? dispatch(closeCart()) : dispatch(openCart());
 	};
 
+	// const handleMouseEnter = () => {
+	// 	dispatch(openCart());
+	// };
+
+	// const handleMouseLeave = () => {
+	// 	dispatch(closeCart());
+	// };
+
 	const productsQuantity = () => {
 		return cart.reduce((acc, item) => acc + item.quantity, 0);
 	};
 
 	return (
 		<>
-			{!isOpen && (
-				<button className={styles.cartBtn} onClick={handleCartButtonClick}>
-					<BsFillBasket3Fill />
-					{cart.length ? (
-						<span className={styles.cartQuantity}>{productsQuantity()}</span>
-					) : null}
-				</button>
-			)}
+			<button
+				className={styles.cartBtn}
+				onClick={handleCartButtonClick}
+				// onMouseEnter={handleMouseEnter}
+				// onMouseLeave={handleMouseLeave}
+			>
+				<BsFillBasket3Fill />
+				{/* if any items in cart - display quantity on button */}
+				{cart.length ? (
+					<span className={styles.cartQuantity}>{productsQuantity()}</span>
+				) : null}
+			</button>
 		</>
 	);
 };

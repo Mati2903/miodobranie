@@ -1,0 +1,16 @@
+.addToCartBtn {
+	font-size: 1.1rem;
+	background-color: var(--honey-color);
+	border: none;
+	border-radius: 5px;
+	padding: 0.7rem 1rem;
+	transition: filter 0.15s linear;
+}
+
+.addToCartBtn:hover {
+	filter: brightness(125%);
+}
+
+.addToCartBtn:active {
+	filter: brightness(80%);
+}
