@@ -1,10 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
+import { Fragment } from "react";
 import {
 	AiOutlineMinus,
 	AiOutlinePlus,
 	AiOutlineClose,
 	AiOutlineDelete,
 } from "react-icons/ai";
+import { RiArrowGoBackFill } from "react-icons/ri";
+import { useClickOutside } from "@mantine/hooks";
+import Link from "next/link";
 
 import {
 	incrementQuantity,
@@ -14,9 +18,11 @@ import {
 } from "../redux/cartSlice";
 import styles from "../src/styles/Cart.module.css";
 
-const Cart = ({ fullscreen }) => {
+const Cart = ({ summary }) => {
 	const dispatch = useDispatch();
 	const cart = useSelector((state) => state.cart);
+
+	const ref = useClickOutside(() => dispatch(closeCart()));
 
 	const handleClose = () => {
 		dispatch(closeCart());
@@ -30,11 +36,20 @@ const Cart = ({ fullscreen }) => {
 	};
 
 	return (
-		<div className={`${styles.cart} ${fullscreen && styles.fullscreen}`}>
-			<h2 className={styles.cart__heading}>Koszyk</h2>
-			<button className={styles.cart__closeBtn} onClick={handleClose}>
-				<AiOutlineClose />
-			</button>
+		<div className={summary ? `${styles.summary}` : `${styles.cart}`} ref={ref}>
+			<h2 className={styles.cart__heading}>
+				{summary ? "Podsumowanie" : "Koszyk"}
+			</h2>
+			{summary ? (
+				<Link className={styles.cart__backToShop} href="/shop">
+					<RiArrowGoBackFill /> Wróć do zakupów
+				</Link>
+			) : (
+				<button className={styles.cart__closeBtn} onClick={handleClose}>
+					<AiOutlineClose />
+				</button>
+			)}
+
 			{cart.length > 0 && (
 				<div className={styles.cart__tableHeaders}>
 					<p>Produkt</p>
@@ -44,10 +59,12 @@ const Cart = ({ fullscreen }) => {
 			)}
 			<span className={styles.cart__productDivider}></span>
 			{/* if no products in cart, display text */}
-			{cart.length === 0 && <p>Brak produktów w koszyku</p>}
+			{cart.length === 0 && (
+				<p className={styles.cart__noProductsInfo}>Brak produktów w koszyku</p>
+			)}
 			{cart.map((item) => (
-				<>
-					<div className={styles.cart__product} key={item.id}>
+				<Fragment key={item.id}>
+					<div className={styles.cart__product}>
 						<h3 className={styles.cart__productHeading}>
 							{item.attributes.name}
 						</h3>
@@ -79,10 +96,21 @@ const Cart = ({ fullscreen }) => {
 						</p>
 					</div>
 					<span className={styles.cart__productDivider}></span>
-				</>
+				</Fragment>
 			))}
 			{cart.length !== 0 && (
-				<p className={styles.cart__sum}>Wartość koszyka: {totalPrice()} zł</p>
+				<>
+					<p className={styles.cart__sum}>Wartość koszyka: {totalPrice()} zł</p>
+					{summary ? (
+						<Link className={styles.cart__payment} href="/payment">
+							Przejdź do płatności
+						</Link>
+					) : (
+						<Link className={styles.cart__summary} href="/shop/summary">
+							Przejdź do podsumowania
+						</Link>
+					)}
+				</>
 			)}
 		</div>
 	);
